@@ -19,6 +19,8 @@ public abstract class Person {
         this.gender = gender;
     }
 
+    public abstract Double calculateIncome();
+
     public String getName() {
         return name;
     }
