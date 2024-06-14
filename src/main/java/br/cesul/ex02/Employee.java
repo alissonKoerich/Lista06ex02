@@ -18,18 +18,28 @@ public class Employee extends Person {
 
     @Override
     public Double calculateIncome() {
-        var total = salary * 0.11;
+        var valueInss = getInss();
+        var valueIr = getIr();
+        var totalSalary = 0.0;
 
-        if (total <= 2259.20) {
-            return 0.0;
-        } else if (total <= 2826.65) {
-            return total * 0.075 - 142.80;
-        } else if (total <= 3751.05) {
-            return total * 0.15 - 354.80;
-        } else if (total <= 4664.68) {
-            return total * 0.225 - 636.13;
-        } else
-            return total * 0.275 - 839.36;
+        return totalSalary = salary - valueInss - valueIr;
+    }
+
+
+    public Double getIr() {
+        if (salary <= 2259.20) {
+            return salary;
+        } else if (salary <= 2826.65) {
+            return (salary * 0.075) - 142.80;
+        } else if (salary <= 3751.05) {
+            return (salary * 0.15) - 354.80;
+        } else if (salary <= 4664.68) {
+            return (salary * 0.225) - 636.13;
+        } else return (salary * 0.275) - 839.36;
+    }
+
+    public Double getInss() {
+        return salary * 0.11;
     }
 
     public Double getSalary() {
