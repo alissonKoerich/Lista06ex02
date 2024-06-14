@@ -2,7 +2,7 @@ package br.cesul.ex02;
 
 import java.time.LocalDate;
 
-public class Shareholder extend Person{
+public class Shareholder extends Person{
 
     private Double share;
 

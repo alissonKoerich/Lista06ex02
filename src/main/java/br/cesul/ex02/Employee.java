@@ -16,6 +16,14 @@ public class Employee extends Person {
         this.ctps = ctps;
     }
 
+    @Override
+    public Double calculateIncome() {
+        var total = salary * 0.11;
+
+        if (salary >= 2.259 && salary <= 2.826) {
+            
+        }
+    }
 
     public Double getSalary() {
         return salary;
