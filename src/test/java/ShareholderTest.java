@@ -30,4 +30,19 @@ public class ShareholderTest {
 
 
     }
+
+    @Test
+    void shareholderIncomeCalculationWith30participation(){
+
+        var shareholder = new Shareholder("Alisson","11111111","11111111",LocalDate.of(2004, 8, 12),
+                Sex.MALE,30.0,5000.0);
+
+        assertEquals(7500.0,shareholder.calculateIncome());
+
+
+    }
+
+
+
+
 }

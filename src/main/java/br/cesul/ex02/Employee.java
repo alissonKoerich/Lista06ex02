@@ -14,7 +14,7 @@ public class Employee extends Person {
         this.salary = salary;
         this.pis = pis;
         this.ctps = ctps;
-    }
+    }   
 
     @Override
     public Double calculateIncome() {
