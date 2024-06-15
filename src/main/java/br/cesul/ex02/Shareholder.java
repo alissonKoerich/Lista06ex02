@@ -14,16 +14,23 @@ public class Shareholder extends Person{
         this.stockValue = stockValue;
     }
 
-    @Override
-    public Double calculateIncome() {
-        var total = stockValue * share;
+    public Double getCapital(){
 
-        if (total <= 25) {
-            return total * 0.01;
-        } else if (total <= 50) {
-            return total * 0.05;
+        return stockValue * share;
+
+    }
+
+        @Override
+    public Double calculateIncome() {
+        Double capital = getCapital();
+
+
+        if (share <= 25.0) {
+            return capital * 0.01;
+        } else if (share <= 50.0) {
+            return capital * 0.05;
         } else
-            return total * 0.10;
+            return capital * 0.10;
     }
 
     public Double getShare() {
