@@ -20,7 +20,7 @@ public class Employee extends Person {
     public Double calculateIncome() {
         var valueInss = getInss();
         var valueIr = getIr();
-        var totalSalary = 0.0;
+        var totalSalary = 0D;
 
         return totalSalary = salary - valueInss - valueIr;
     }
@@ -39,6 +39,7 @@ public class Employee extends Person {
     }
 
     public Double getInss() {
+
         return salary * 0.11;
     }
 

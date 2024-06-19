@@ -42,6 +42,17 @@ public class ShareholderTest {
 
     }
 
+    @Test
+    void getCapitalTest() {
+        var getCapital = new Shareholder("Gabriel",
+                "1111111",
+                "095.428.233.23",
+                LocalDate.of(2002, 2, 21),
+                Sex.MALE,
+                20D,
+                800D);
+        assertEquals(16000D, getCapital.getCapital());
+    }
 
 
 

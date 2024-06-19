@@ -56,10 +56,4 @@ public class EmployeeTest {
 
         assertEquals(313.5, totalInss.getInss());
     }
-
-
-
-
-
-
 }
