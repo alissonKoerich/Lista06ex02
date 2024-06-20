@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class Employee extends Person {
 
     private Double salary;
-    private String pis;
-    private String ctps;
+    private final String pis;
+    private final String ctps;
 
 
     public Employee(String name, String rg, String cpf, LocalDate birthDate, Sex gender, Double salary, String pis, String ctps) {
@@ -53,5 +53,9 @@ public class Employee extends Person {
 
     public String getCtps() {
         return ctps;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
     }
 }

@@ -56,4 +56,18 @@ public class EmployeeTest {
 
         assertEquals(313.5, totalInss.getInss());
     }
+
+    @Test
+    void testIncomeCalculation2() {
+        var calculateIncome = new Employee("João",
+                "5555555",
+                "55555555",
+                LocalDate.of(2000,3,16),
+                Sex.MALE,
+                3000D,
+                "444444",
+                "4444444");
+
+        assertEquals(2574.8, calculateIncome.calculateIncome());
+    }
 }
